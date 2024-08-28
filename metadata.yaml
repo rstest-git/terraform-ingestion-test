@@ -47,14 +47,6 @@ spec:
               time       = string
             }))
         defaultValue: []
-      - name: iam_users
-        description: A list of IAM users to be created in your CloudSQL instance
-        varType: |-
-          list(object({
-              id    = string,
-              email = string
-            }))
-        defaultValue: []
         connections:
         - source:
             source: github.com/terraform-google-modules/terraform-google-service-accounts//modules/simple-sa
@@ -91,10 +83,6 @@ spec:
         description: The name of the default user
         varType: string
         defaultValue: default
-      - name: user_password
-        description: The password for the default user. If not set, a random one will be generated and available in the generated_user_password output variable.
-        varType: string
-        defaultValue: ""
       - name: zone
         description: "The zone for the Cloud SQL instance, it should be something like: `us-central1-a`, `us-east1-c`."
         varType: string

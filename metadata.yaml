@@ -14,11 +14,11 @@
 
 apiVersion: blueprints.cloud.google.com/v1alpha1
 kind: BlueprintMetadata
-metadata:
+randomkey:
   name: terraform-google-sql-db
   annotations:
     config.kubernetes.io/local-config: "true"
-spec:
+wrongspec:
   info:
     title: terraform-google-sql for PostgreSQL
     source:
